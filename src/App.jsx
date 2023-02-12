@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import { useTelegram } from '../src/hooks/useTelegram';
+import Header from './components/Header/Header';
 
 const App = () => {
   const { onToggleButton, telegram } = useTelegram();
@@ -9,7 +10,12 @@ const App = () => {
     telegram.ready();
   });
 
-  return <button onClick={onToggleButton}>Toggle</button>;
+  return (
+    <>
+      <Header />
+      <button onClick={onToggleButton}>Toggle</button>;
+    </>
+  );
 };
 
 const container = document.getElementById('root');
