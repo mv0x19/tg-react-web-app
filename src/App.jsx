@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import { useTelegram } from '../src/hooks/useTelegram';
+import Button from './components/Button/Button';
 import Header from './components/Header/Header';
 
 const App = () => {
@@ -13,7 +14,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <button onClick={onToggleButton}>Toggle</button>;
+      <Button onClick={onToggleButton}>Toggle</Button>;
     </>
   );
 };
